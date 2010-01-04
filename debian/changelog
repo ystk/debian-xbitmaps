@@ -1,0 +1,59 @@
+xbitmaps (1.1.0-1) unstable; urgency=low
+
+  [ Andres Salomon ]
+  * Test for obj-$(DEB_BUILD_GNU_TYPE) before creating it during build;
+    idempotency fix.
+  * Run dh_install w/ --list-missing.
+
+  [ Julien Cristau ]
+  * Add watch file.
+  * Run autoreconf at build time.
+  * Bump debhelper compat level to 5.
+  * Remove Branden and Fabio from Uploaders.
+  * Add Vcs-{Git,Browser} control fields.
+  * Build the package in binary-indep, not binary-arch (lintian).
+  * Drop Conflicts/Replaces on pre-etch xlibs-data, and Pre-Depends on etch
+    x11-common.
+  * Bump Standards-Version to 3.8.3.
+  * New upstream release.
+  * Install the upstream changelog.
+  * Install xbitmaps.pc in /usr/share instead of /usr/lib (closes: #551113).
+    Thanks, Colin Watson!
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 04 Jan 2010 17:45:12 +0000
+
+xbitmaps (1.0.1-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Tue,  4 Apr 2006 18:33:41 -0400
+
+xbitmaps (1.0.1-1) experimental; urgency=low
+
+  * First upload to Debian
+
+ -- David Nusinow <dnusinow@debian.org>  Thu, 26 Jan 2006 21:48:49 -0500
+
+xbitmaps (1.0.1-0ubuntu2) dapper; urgency=low
+
+  * Change dependency on x-common to x11-common.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Thu, 19 Jan 2006 18:38:13 +1100
+
+xbitmaps (1.0.1-0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Fri,  6 Jan 2006 07:47:41 +1100
+
+xbitmaps (1.0.0-0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon, 19 Dec 2005 09:29:29 +1100
+
+xbitmaps (0.99.0-1) breezy; urgency=low
+
+  * First xbitmaps release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon, 11 Jul 2005 15:07:19 +1000
