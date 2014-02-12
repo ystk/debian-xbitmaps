@@ -34,12 +34,12 @@ build: build-stamp
 build-stamp:
 	dh_testdir
 	autoreconf -vfi
-	mkdir -p obj-$(DEB_BUILD_GNU_TYPE)
-	cd obj-$(DEB_BUILD_GNU_TYPE) && CFLAGS="$(CFLAGS)" \
+	mkdir -p build
+	cd build && CFLAGS="$(CFLAGS)" \
 	../configure --prefix=/usr --mandir=\$${prefix}/share/man \
 	             --infodir=\$${prefix}/share/info --sysconfdir=/etc \
 		     $(confflags)
-	cd obj-$(DEB_BUILD_GNU_TYPE) && $(MAKE)
+	cd build && $(MAKE)
 	>$@
 
 clean:
@@ -51,7 +51,7 @@ clean:
 	rm -f */config.cache */config.log */config.status
 	rm -f conftest* */conftest*
 	rm -rf autom4te.cache */autom4te.cache
-	rm -rf obj-*
+	rm -rf build
 	rm -f aclocal.m4 config.h.in configure install-sh missing
 	rm -f config.guess config.sub
 	find -name Makefile.in -delete
@@ -64,7 +64,7 @@ install: build
 	dh_clean -k
 	dh_installdirs
 
-	cd obj-$(DEB_BUILD_GNU_TYPE) && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+	cd build && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
 
 # Build architecture-dependent files here.
 binary-arch: build install
@@ -76,7 +76,7 @@ binary-indep: build install
 	dh_testroot
 
 	dh_installdocs
-	dh_install --sourcedir=debian/tmp --list-missing
+	dh_install --sourcedir=debian/tmp --fail-missing
 	dh_installchangelogs ChangeLog
 	dh_installman
 	dh_link

@@ -1,3 +1,19 @@
+xbitmaps (1.1.1-1) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+
+  [ Cyril Brulebois ]
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Switch dh_install from --list-missing to --fail-missing for added
+    safety.
+  * Adapt xbitmaps.install: xbitmaps.pc moved from /usr/lib/pkgconfig to
+    /usr/share/pkgconfig.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 13 Jan 2011 23:25:16 +0100
+
 xbitmaps (1.1.0-1) unstable; urgency=low
 
   [ Andres Salomon ]
