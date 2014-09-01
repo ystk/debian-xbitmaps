@@ -1,3 +1,10 @@
+xbitmaps (1.1.1-2) unstable; urgency=low
+
+  * Remove David from Uploaders.
+  * Mark xbitmaps as Multi-Arch: foreign.
+
+ -- Julien Cristau <jcristau@debian.org>  Thu, 30 Aug 2012 20:51:25 +0200
+
 xbitmaps (1.1.1-1) unstable; urgency=low
 
   [ Julien Cristau ]

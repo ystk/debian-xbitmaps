@@ -2,7 +2,7 @@ Source: xbitmaps
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: David Nusinow <dnusinow@debian.org>, Cyril Brulebois <kibi@debian.org>
+Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends:
  debhelper (>= 5),
  xutils-dev (>= 1:7.5~),
@@ -13,6 +13,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-xorg/data/xbitmaps.git
 
 Package: xbitmaps
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: Base X bitmaps
  This package contains the base X bitmaps, which are used in many legacy X
